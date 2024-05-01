@@ -3,7 +3,8 @@ import './typingeffect.css';
 
 
 function TypingEffect({ prefix }) {
-  const phrases = ["SentimentZen", "Mood Enhancer", "Personal Recommender"];
+  const phrases = ["Friend", "Mood Enhancer", "Personal Recommender"];
+  
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [currentPhrase, setCurrentPhrase] = useState(phrases[0]);
@@ -19,7 +20,7 @@ function TypingEffect({ prefix }) {
         setCharIndex(0);
       }
     }, 200); // Adjust typing speed here
-
+   loop:true;
     return () => clearTimeout(timer);
   }, [charIndex, currentPhrase, index, phrases]);
 

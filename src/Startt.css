@@ -4,10 +4,13 @@ body {
     padding: 0;
     /*overflow: hidden; /* Hide scrollbars */
     position: relative; /* Ensure overlay covers entire viewport */
-    transition: opacity 1s ease-in; /* Apply transition to the entire body */
+    transition: opacity 1s ease; /* Apply transition to the entire body */
 }
-#speechrecognition{
+
+#speechRecognitionBtn{
+    margin:30px;
     border:1px solid white;
+    padding:10px 10px;
 }
 #overlay {
     position: fixed;
@@ -19,17 +22,64 @@ body {
     z-index: 1; /* Place overlay above video and below content */
 }
 
-#video-bg {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    z-index: -1; /* Place the video behind other content */
+.inputt {
+    position: relative;
+    display: inline-block;
 }
+
+.inputt input[type="text"] {
+    padding: 15px 150px; /* Adjust padding as needed */
+    border: none;
+    border-radius: 60px; /* Adjust border-radius for roundness */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Initial glow effect */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+    width: 300px; /* Adjust width as needed */
+}
+
+.inputt input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Enhanced glow effect on focus */
+}
+
+.inputt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1; /* Ensure the pseudo-element is behind the input */
+}
+
+.inputt::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    z-index: -2; /* Ensure the pseudo-element is behind the input and its background */
+}
+
+/* Add animation */
+.inputt input[type="text"] {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Start with a subtle glow effect */
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(222, 2, 56, 0.9); /* End with a stronger glow effect */
+    }
+}
+
 
 .content {
     position: relative;
@@ -53,22 +103,17 @@ body {
 } */
 .container {
     margin: auto;
-    
 }
 
 .input-container {
     text-align: center;
-    margin-top: -15px; 
+    margin-top: 15px; 
     border-radius:100%;
     opacity:0.5;
     /* background-color:#ffff00;
     border:1px solid white; */
 }
 
-.input-container label {
-    font-size: 25px;
-    border:1px solid white;
-}
 
 .input-container input[type="text"],
 .input-container button {
@@ -88,6 +133,10 @@ body {
   }
   
   /* Add loading class to button */
+  #submitBtn{
+    padding: 10px 80px;
+    border:1px solid white;
+  }
   #submitBtn.loading::after {
     content: "";
     
@@ -142,22 +191,19 @@ body {
 }
 
 /* Style the semi-transparent black overlay */
-#video-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Place the overlay above the video */
-    display: none; /* Initially hide the overlay */
-}
 
 #myChart {
     margin-top: 20px;
+    padding:5%;
    /* width: 1000px;/* Set the desired width */
     height: auto; 
 }
+
+#firstemotionText{
+    font-size: 28px;
+    color: #ff6384;
+}
+
 #emotionText {
     font-size: 30px; /* Adjust the font size as needed */
 }

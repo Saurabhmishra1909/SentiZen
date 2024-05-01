@@ -12,21 +12,31 @@
   .fade-in {
     opacity: 1;
   }
-  .headclass{
-    margin-top:10%;
-    padding-top:50%; 
-  text-align:center;
-  padding: 10px 20px;
-  font-size: 160px;
-  color:#ffff;
-  
+  .headclass {
+    font-family: 'Roboto',serif;
+    margin-top: 10%;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 100px;
+    color: #fff;
+    animation: fadeAnimation 2s ease-in-out infinite alternate; /* Apply the animation */
   }
+  
+  @keyframes fadeAnimation {
+    0% {
+      opacity: 1; /* Start with full opacity */
+    }
+    100% {
+      opacity: 0.5; /* End with half opacity */
+    }
+  }
+  
+  
   .cover-title {
     padding-top:40%;
     font-family:"Silkscreen",sans-serif;
     font-size: 50px;
     color: #6b6a6a; /* Set text color to match the video background */
-    margin-bottom: 20px;
   }
   
   
@@ -35,18 +45,18 @@
     font-family:"Silkscreen",sans-serif;
     font-size: 20px;
     color: #fff; /* Set text color to match the video background */
-    margin-bottom: 40px;
+
   }
   
   .start-button {
   display: inline-block;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 30px;
   color:#fff;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 2px solid white;
   border-radius: 5px;
   transition: all 0.3s ease; /* Add transition for background-color and transform */
   }

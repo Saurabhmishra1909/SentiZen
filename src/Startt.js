@@ -103,6 +103,7 @@ const Startt = () => {
     const showChart = () => {
         document.getElementById('queryInput').style.display = 'none';
         document.getElementById('submitBtn').style.display = 'none';
+        document.getElementById('submitBtn').style.display = 'none';
         document.getElementById('speechRecognitionBtn').style.display = 'none';
         document.getElementById('suggestionsSection').style.display = 'block';
     };
@@ -138,18 +139,14 @@ const Startt = () => {
             {/* <p>Take a moment to immerse yourself in the beauty of life's simple joys. Let the gentle whispers of nature soothe your soul, as you embrace the warmth of a sun-kissed breeze.</p>
             <p> Feel the rhythm of your heartbeat synchronize with the melody of the universe, reminding you of the infinite possibilities that lie ahead. Allow gratitude to fill your heart and gratitude to guide your path.</p> */}
             <div className="container">
-                <canvas id="myChart"></canvas>
-                <div className="input-container" id="textInputLabel">
-                    <input type="text" id="queryInput" placeholder="How are you feeling?" />
-                    <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Analyze</button>
-                    
+                <div className="inputt">
+                <input type="text" id="queryInput" placeholder="How are you feeling?" />
                 </div>
-
-                <div className="or-divider" id="orDivider">OR</div>
-
-                <div className="input-container">
+                <div className="input-container" id="textInputLabel">
+                    <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Analyze</button>
                     <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>Start Speech Recognition</button>
                 </div>
+                <canvas id="myChart"></canvas>
                 <p id="firstemotionText">{emotionLabel && `Based on the analysis you seem to be feeling: ${tempEmo}`}</p>
                 {suggestionsVisible && (
                     <div id="suggestionsSection">
@@ -164,7 +161,7 @@ const Startt = () => {
                                 <h2 className='textt'>Books</h2>
                             </button>
                             <button className="button" onClick={() => handleButtonClick('Podcast')}>
-                                <img src="imgs/podcast.png" alt="Podcast" />
+                                <img src="imgs/meditation.png" alt="Podcast" />
                                 <h2 className='textt'>Meditaion and Yoga</h2>
                             </button>
                             <button className="button" onClick={() => handleButtonClick('Movies')}>
