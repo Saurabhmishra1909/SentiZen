@@ -14,19 +14,30 @@
   <!-- Include Chart.js library -->
   <link rel="stylesheet" href="stylesheet.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <title>React App</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 5px;
+      background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your image */
+      position: fixed;
+      background-size: cover; /* Ensure the background covers the entire screen */
+      background-attachment: fixed; /* Make the background non-scrollable and fixed */
+      /* Other background properties */
+    }
+  </style>
+  
 </head>
 
 <body>
+  <p>.</p>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="overlay"></div> <!-- Semi-transparent overlay -->
-  <video autoplay muted loop id="video-bg">
-    <source src="background-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+ 
   <div id="video-overlay"></div>
   <div id="fireflies-container"></div>
   <div id="root"></div>
