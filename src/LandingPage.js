@@ -21,13 +21,16 @@ function CoverPage() {
   };
 
   return (
+    <>
+    <div className="headclass">SentimentZen</div>
     <div className="putin">
       {showStartComponent ? ( // Conditionally render based on showStartComponent state
         <Startt /> // Render the Startt component if showStartComponent is true
       ) : (
         <div className={`cover-container ${isLoaded ? 'fade-in' : ''}`}>
           {/* Render cover-container content only if showStartComponent is false */}
-          <TypingEffect  prefix="I am" />
+          
+          <TypingEffect prefix="I am" />
           <p className="cover-subtitle">Express yourself and let us suggest what's best for you.</p>
           <a href="#" onClick={handleStartClick} className="start-button">
             Start <span>&rarr;</span>
@@ -35,6 +38,7 @@ function CoverPage() {
         </div>
       )}
     </div>
+    </>
   );
 }
 

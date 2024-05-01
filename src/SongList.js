@@ -10,7 +10,7 @@ export default function SongList(props) {
             <div>
                 <h3>{title}</h3>
                 <p>Singer: {singer}</p>
-                <button>Listen Now</button>
+                <button className='bttn'>Listen Now</button>
             </div>
         </div>
     )

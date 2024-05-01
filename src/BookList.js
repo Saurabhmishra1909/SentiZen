@@ -9,7 +9,7 @@ export default function BookList(props) {
             <div>
                 <h3>{title}</h3>
                 <p>{author}</p>
-                <button>Read Now</button>
+                <button className='bttn'>Read Now</button>
             </div>
         </div>
     )

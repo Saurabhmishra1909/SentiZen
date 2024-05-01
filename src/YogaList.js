@@ -13,7 +13,7 @@ export default function YogaList(props) {
             <div>
                 <h3>{yoga}</h3>
                 <p>{description}</p>
-                <button onClick={handleButtonClick}>
+                <button className='bttn' onClick={handleButtonClick}>
                     Watch Tutorial
                 </button>
             </div>

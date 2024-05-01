@@ -12,17 +12,27 @@
   .fade-in {
     opacity: 1;
   }
+  .headclass{
+    margin-top:10%;
+    padding-top:50%; 
+  text-align:center;
+  padding: 10px 20px;
+  font-size: 160px;
+  color:#ffff;
   
+  }
   .cover-title {
-    padding-top:70%;
+    padding-top:40%;
+    font-family:"Silkscreen",sans-serif;
     font-size: 50px;
-    color: #ffff00; /* Set text color to match the video background */
+    color: #6b6a6a; /* Set text color to match the video background */
     margin-bottom: 20px;
   }
   
   
   .cover-subtitle {
     margin:100px;
+    font-family:"Silkscreen",sans-serif;
     font-size: 20px;
     color: #fff; /* Set text color to match the video background */
     margin-bottom: 40px;

@@ -135,14 +135,13 @@ const Startt = () => {
 
     return (
         <div className="content">
-            <h1>SentimentZen</h1>
-            <p>Take a moment to immerse yourself in the beauty of life's simple joys. Let the gentle whispers of nature soothe your soul, as you embrace the warmth of a sun-kissed breeze.</p>
-            <p> Feel the rhythm of your heartbeat synchronize with the melody of the universe, reminding you of the infinite possibilities that lie ahead. Allow gratitude to fill your heart and gratitude to guide your path.</p>
+            {/* <p>Take a moment to immerse yourself in the beauty of life's simple joys. Let the gentle whispers of nature soothe your soul, as you embrace the warmth of a sun-kissed breeze.</p>
+            <p> Feel the rhythm of your heartbeat synchronize with the melody of the universe, reminding you of the infinite possibilities that lie ahead. Allow gratitude to fill your heart and gratitude to guide your path.</p> */}
             <div className="container">
                 <canvas id="myChart"></canvas>
                 <div className="input-container" id="textInputLabel">
                     <input type="text" id="queryInput" placeholder="How are you feeling?" />
-                    <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Submit</button>
+                    <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Analyze</button>
                     
                 </div>
 

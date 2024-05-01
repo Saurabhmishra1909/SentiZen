@@ -6,7 +6,9 @@ body {
     position: relative; /* Ensure overlay covers entire viewport */
     transition: opacity 1s ease-in; /* Apply transition to the entire body */
 }
-
+#speechrecognition{
+    border:1px solid white;
+}
 #overlay {
     position: fixed;
     top: 0;
@@ -42,27 +44,30 @@ body {
     opacity: 1;
 }
 
-h1 {
+/* h1 {
     margin-top: 10px; 
     margin-bottom: 0px; 
     text-align: center;
     color: #fff;
     font-size: 55px;
-}
+} */
 .container {
-    width: 80%;
     margin: auto;
     
 }
 
 .input-container {
     text-align: center;
-    margin-top: 20px; 
-    border-radius:20%;
+    margin-top: -15px; 
+    border-radius:100%;
+    opacity:0.5;
+    /* background-color:#ffff00;
+    border:1px solid white; */
 }
 
 .input-container label {
     font-size: 25px;
+    border:1px solid white;
 }
 
 .input-container input[type="text"],
@@ -170,7 +175,7 @@ h1 {
 }
 
 .button img {
-    width: 60%;
+    width: 200px;
     height: auto;
     display: block; /* Prevent extra space below the image */
 }

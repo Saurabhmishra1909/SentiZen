@@ -11,7 +11,7 @@ export default function BookList(props) {
                 <h3>{movie_title}</h3>
                 <p>{year_of_release}</p>
                 <p>IMDB: {imdb_rating}</p>
-                <button>Watch Now</button>
+                <button className='bttn'>Watch Now</button>
             </div>
         </div>
     )
