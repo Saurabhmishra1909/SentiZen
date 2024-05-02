@@ -34,29 +34,50 @@ const Startt = () => {
                             label: data[0].label,
                             data: data.map(row => row.score),
                             backgroundColor: [
-                                'rgba(255, 99, 132, 0.2)',
-                                'rgba(54, 162, 235, 0.2)',
-                                'rgba(255, 206, 86, 0.2)',
-                                'rgba(75, 192, 192, 0.2)',
-                                'rgba(153, 102, 255, 0.2)',
-                                'rgba(255, 159, 64, 0.2)'
+                                'rgba(255, 99, 132, 0.8)',
+                                'rgba(54, 162, 235, 0.8)',
+                                'rgba(255, 206, 86, 0.8)',
+                                'rgba(75, 192, 192, 0.8)',
+                                'rgba(153, 102, 255, 0.8)',
+                                'rgba(255, 159, 64, 0.8)'
                             ],
                             borderColor: [
-                                'rgba(255, 99, 132, 1)',
                                 'rgba(54, 162, 235, 1)',
-                                'rgba(255, 206, 86, 1)',
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(255, 159, 64, 1)',
                                 'rgba(75, 192, 192, 1)',
-                                'rgba(153, 102, 255, 1)',
-                                'rgba(255, 159, 64, 1)'
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(153, 102, 255, 1)'
                             ],
-                            borderWidth: 1
+                            borderWidth: 2
                         }]
                     },
                     options: {
                         scales: {
                             y: {
-                                beginAtZero: true
-                            }
+                                beginAtZero: true,
+                                ticks: {
+                                    font: {
+                                        size: 30, // Adjust font size as needed
+                                        family: 'Arial', // Specify font family
+                                        style: 'italic', // Specify font style
+                                         // Specify font weight
+                                    },
+                                    color: '#fff', // Specify font color
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    font: {
+                                        size: 30,
+                                        family: 'Arial',
+                                        style: 'italic',
+                                       
+                                    },
+                                    color: '#fff',
+                                }
+                            },
+                            
                         }
                     }
                 });
@@ -133,7 +154,7 @@ const Startt = () => {
                 return null;
         }
     };
-
+   
     return (
         <div className="content">
             {/* <p>Take a moment to immerse yourself in the beauty of life's simple joys. Let the gentle whispers of nature soothe your soul, as you embrace the warmth of a sun-kissed breeze.</p>
@@ -144,10 +165,12 @@ const Startt = () => {
                 </div>
                 <div className="input-container" id="textInputLabel">
                     <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Analyze</button>
-                    <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>Start Speech Recognition</button>
+                    <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>Voice Input</button>
                 </div>
+                <div className="chartt">
                 <canvas id="myChart"></canvas>
                 <p id="firstemotionText">{emotionLabel && `Based on the analysis you seem to be feeling: ${tempEmo}`}</p>
+                </div>
                 {suggestionsVisible && (
                     <div id="suggestionsSection">
                         <p id="emotionText">Here are some suggestions based on your mood:</p>

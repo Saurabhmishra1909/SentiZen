@@ -3,6 +3,7 @@ import './LandingPage.css'; // Import your CSS file
 import Startt from './Startt.js'; // Import the Startt component
 import TypingEffect from './typingeffect'; // Import the TypingEffect component
 import './typingeffect.css';
+import SentiHead from './sentiHead.js'; // Import the sentiHead component
 
 function CoverPage() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -16,21 +17,22 @@ function CoverPage() {
   }, []);
 
   const handleStartClick = (event) => {
+    setFetch(false)
     event.preventDefault();
     setShowStartComponent(true); // Show the Startt component on click
   };
+  const [fetch , setFetch] = useState(true);
 
   return (
     <>
-    <h1 className="headclass">SentimentZen</h1>
+     {/* Render the sentiHead component */}
     <div className="putin">
+    { fetch && <SentiHead /> }
       {showStartComponent ? ( // Conditionally render based on showStartComponent state
         <Startt /> // Render the Startt component if showStartComponent is true
       ) : (
-        
         <div className={`cover-container ${isLoaded ? 'fade-in' : ''}`}>
           {/* Render cover-container content only if showStartComponent is false */}
-         
           <TypingEffect prefix="Your" />
           <p className="cover-subtitle">Express yourself and let us suggest what's best for you.</p>
           <a href="#" onClick={handleStartClick} className="start-button">
