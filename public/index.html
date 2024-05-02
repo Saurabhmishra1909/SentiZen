@@ -24,9 +24,9 @@
       margin: 0;
       padding: 5px;
       background-image: url('background.jpg'); /* Replace 'background.jpg' with the path to your image */
-      position: fixed;
-      background-size: cover; /* Ensure the background covers the entire screen */
+      background-size: 100vw 100vh; /* Ensure the background covers the entire screen */
       background-attachment: fixed; /* Make the background non-scrollable and fixed */
+      background-repeat: no-repeat;
       /* Other background properties */
     }
   </style>
@@ -35,7 +35,6 @@
 
 <body>
   <p>.</p>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="overlay"></div> <!-- Semi-transparent overlay -->
  
   <div id="video-overlay"></div>

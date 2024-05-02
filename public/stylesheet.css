@@ -20,9 +20,9 @@
 }
 
 
-  /* Customize the scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 1px;
+    
     /* Width of the scrollbar */
   }
 
