@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './LandingPage.css'; // Import your CSS file
 import Startt from './Startt.js'; // Import the Startt component
 import TypingEffect from './typingeffect'; // Import the TypingEffect component
+
 import './typingeffect.css';
 import SentiHead from './sentiHead.js'; // Import the sentiHead component
 

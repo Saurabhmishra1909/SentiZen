@@ -1,5 +1,7 @@
 import React from 'react';
 import './sentiHead.css'
+// import React, { useEffect, useState } from 'react';
+import './typingeffect.css';
 
 function sentiHead() {
   return (

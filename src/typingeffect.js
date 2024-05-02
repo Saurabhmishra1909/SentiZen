@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './typingeffect.css';
 
 
+
 function TypingEffect({ prefix }) {
   const phrases = ["Friend", "Mood Enhancer", "Personal Recommender"];
   

@@ -134,9 +134,27 @@ const Startt = () => {
     };
 
     const startSpeechRecognition = () => {
-        // Placeholder function for starting speech recognition
-        console.log('Starting speech recognition...');
-        // You can implement speech recognition functionality here
+        if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+            const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.start();
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById('queryInput').value = transcript;
+                const inputEvent = new Event('input', { bubbles: true });
+                document.getElementById('queryInput').dispatchEvent(inputEvent);
+            };
+
+            recognition.onerror = (event) => {
+                console.error('Speech Recognition Error:', event.error);
+            };
+
+            recognition.onend = () => {
+                console.log('Speech Recognition Ended');
+            };
+        } else {
+            console.error('Speech Recognition not supported in this browser');
+        }
     };
 
     // Render the selected component based on button click
