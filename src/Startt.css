@@ -24,6 +24,7 @@ body {
 }
 
 .inputt {
+    
     margin:20%;
     position: relative;
     display: inline-block;
@@ -111,6 +112,7 @@ body {
 } */
 .container {
     margin: auto;
+    margin-top:-20%;
 }
 
 .input-container {
@@ -200,35 +202,13 @@ body {
 
 /* Style the semi-transparent black overlay */
 .chartt{
-   margin-top:-50%;
+   margin-top:-40%;
     opacity:1;
 }
 #myChart {
     padding:10%;
    /* width: 1000px;/* Set the desired width */
     height: auto; 
-}
-@media only screen and (max-width: 600px) {
-    #myChart {
-        padding: 5%; /* Adjust padding for smaller screens */
-        height:10vh;
-        /* Optionally, you can adjust other properties for small screens */
-    }
-}
-
-/* Media Query for Medium Devices (Tablets) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    #myChart {
-        padding: 8%; /* Adjust padding for medium-sized screens */
-        /* Optionally, you can adjust other properties for medium screens */
-    }
-}
-
-/* Media Query for Large Devices (Desktops) */
-@media only screen and (min-width: 1025px) {
-    #myChart {
-        /* You can optionally adjust padding or other properties for large screens */
-    }
 }
 
 #firstemotionText{

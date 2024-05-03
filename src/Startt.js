@@ -6,6 +6,9 @@ import Podcast from './Podcast';
 import Movie from './Movie';
 import Yoga from './Yoga';
 import './Startt.css';
+import soundFile from './voice.wav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 let tempEmo;
 const Startt = () => {
     const [chartInstance, setChartInstance] = useState(null);
@@ -132,12 +135,14 @@ const Startt = () => {
     const showSuggestions = () => {
         setSuggestionsVisible(true);
     };
-
+    const [iconColor, setIconColor] = useState('initial');
+    const [isPlaying, setIsPlaying] = useState(false); 
     const startSpeechRecognition = () => {
+        setIconColor('red');
+        playSound();
         if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
             const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
             recognition.start();
-
             recognition.onresult = (event) => {
                 const transcript = event.results[0][0].transcript;
                 document.getElementById('queryInput').value = transcript;
@@ -156,7 +161,17 @@ const Startt = () => {
             console.error('Speech Recognition not supported in this browser');
         }
     };
-
+    const playSound = () => {
+        const audio = new Audio(soundFile);
+        audio.play();
+        setIsPlaying(true);
+        audio.onended = () => {
+            setIsPlaying(false); // Reset state when sound ends
+            setTimeout(() => {
+                setIconColor('initial'); // Reset icon color to its original color after a delay
+              }, 5000); 
+          }; // Reset state when sound ends
+    };
     // Render the selected component based on button click
     const renderSelectedComponent = () => {
         switch (selectedComponent) {
@@ -183,7 +198,9 @@ const Startt = () => {
                 </div>
                 <div className="input-container" id="textInputLabel">
                     <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Analyze</button>
-                    <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>Voice Input</button>
+                    <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>
+      Voice Input <FontAwesomeIcon icon={faMicrophone} style={{ color: iconColor }} />
+    </button>
                 </div>
                 <div className="chartt">
                 <canvas id="myChart"></canvas>

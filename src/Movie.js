@@ -9,7 +9,7 @@ export default function Movie(props) {
       <>
         <h2>Feeling {emotionLabel} - Here are some movies</h2>
         {filteredMovies.map(movie => (
-          <MovieList movie_title={movie.movie_title} year_of_release={movie.year_of_release} imdb_rating={movie.imdb_rating} />
+          <MovieList movie_title={movie.movie_title} year_of_release={movie.year_of_release} genre={movie.genre} imdb_rating={movie.imdb_rating} />
         ))}
   
       </>

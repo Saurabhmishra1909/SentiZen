@@ -33,7 +33,7 @@
   
   
   .cover-title {
-    padding-top:40%;
+    padding-top:50%;
     font-family:"Silkscreen",sans-serif;
     font-size: 50px;
     color: #6b6a6a; /* Set text color to match the video background */
@@ -75,4 +75,32 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out; /* Add transition for opacity */
   }
+  .senthead {
+    font-family: 'Roboto', serif;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 100px;
+    color: #fff;
+    animation: fadeAnimation 2s ease-in-out infinite alternate;
+  }
+  /* Media Query for Small Devices (Mobile Phones) */
+@media only screen and (max-width: 600px) {
+  .senthead {
+      font-size: 50px;
+  }
+}
+
+/* Media Query for Medium Devices (Tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .senthead {
+      font-size: 80px;
+  }
+}
+
+/* Media Query for Large Devices (Desktops) */
+@media only screen and (min-width: 1025px) {
+  .senthead {
+      margin-top: 5%; /* Adjusted for larger screens */
+  }
+}
   
