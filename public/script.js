@@ -9,7 +9,7 @@ function createFirefly() {
     animateFirefly(firefly);
 }
 function animateFirefly(firefly) {
-    const animationDuration = Math.random() * 8000 + 3000; // Random duration between 3 and 11 seconds
+    const animationDuration = Math.random() * 8000 + 16000; // Random duration between 3 and 11 seconds
     const startX = parseFloat(firefly.style.left);
     const startY = parseFloat(firefly.style.top);
     const endX = Math.random() * window.innerWidth;
