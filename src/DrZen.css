@@ -1,20 +1,33 @@
 /* ChatInterface.css */
 .zen-chat-container {
-    width: 600px;
-    height:650px;
-    margin-left:1650px;
-    /* margin: 50px auto; */
-    padding: 20px;
-    /* z-index:4; */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 600px;
+  height: auto; /* Start with height 0 */
+  overflow: hidden; /* Hide overflow content */
+  margin: 20px 1620px;
+  padding: 20px;
+  /* z-index:4; */
+  border: 3px solid #ccc;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(111, 0, 0, 0.9);
+  animation: slideInOutAnimation 0.5s ease forwards; /* Apply the slide-down animation */
+}
+@keyframes slideInOutAnimation {
+  from {
+      transform: translateX(100%); /* Start with the container off-screen to the right */
   }
+  to {
+      transform: translateX(0); /* Slide the container into view */
+  }
+}
+
+
   .zen-response-container {
     color: #fff; /* Set font color to white */
-    width:400px;
+    width:550px;
+    font-size:20px;
     background-color: #4CAF50; /* Set background color to a green shade */
-    border-radius: 10px; /* Add rounded corners */
+    border-radius: 30px; /* Add rounded corners */
     padding: 20px; /* Add some padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
     font-family: Arial, sans-serif; /* Use a fallback font */
@@ -28,9 +41,9 @@
   input[type="text"] {
     flex: 1;
     padding: 10px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    font-size: 16px;
+    border: 1px solid #f00f;
+    border-radius: 20px;
+    font-size: 20px;
     z-index:2;
   }
   

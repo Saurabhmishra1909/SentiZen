@@ -32,9 +32,8 @@ body {
 #queryInput{
     font-size:30px;
     text-align:center;
-    background:none;
-    width: 700px; /* Adjust width as needed */
-    height: 20px;
+    width: 800px; /* Adjust width as needed */
+    height: auto;
 }
 .inputt input[type="text"] {
     padding: 15px 50px; /* Adjust padding as needed */
@@ -97,7 +96,6 @@ body {
 
 .content {
     position: relative;
-    z-index: 1;
     text-align: center;
     color: #d2d2d2;
     opacity: 100;

@@ -16,7 +16,7 @@ const generationConfig = {
     temperature: 0.7, // Adjust temperature for diversity of responses
     topK: 50, // Adjust top-k for diversity of responses
     topP: 0.95,
-    maxOutputTokens: 8192,
+    maxOutputTokens: 6192,
 };
 
 const safetySettings = [
@@ -46,7 +46,7 @@ const DrZen = () => {
 
     const handleSendMessage = async () => {
         if (inputText.trim() !== '') {
-            const introText = "Pretend that you are Dr. Zen, an AI therapist who is working at SentimentZen. Your work is to make the user feel good when user writes their feelings with you. Answer the question only if it is in your domain and dont ask any question with the user. Always introduce yourself before giving your answer. Here is the user input: ";
+            const introText = "Pretend that you are Dr. Zen, an AI therapist who is working at SentimentZen. Your work is to make the user get over the negative emotion and make him feel good always tell him ways to feel better when user writes their feelings with you. Answer the question only if it is in your domain and dont ask any question with the user. Don't give answer for question's that don't involve emotions, Always introduce yourself before giving your answer. Here is the user input: ";
 
             const combinedInput = introText + inputText;
 

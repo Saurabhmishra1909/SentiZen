@@ -29,9 +29,8 @@
     }
   }
   
-  
   .cover-title {
-    padding-top:50%;
+    padding-top:30%;
     font-family:"Silkscreen",sans-serif;
     font-size: 50px;
     color: #6b6a6a; /* Set text color to match the video background */
@@ -47,6 +46,7 @@
   }
   
   .start-button, .dr-zen-button {
+    background:rgba(0,0,0,0.4);
   display: inline-block;
   padding: 10px 20px;
   font-size: 30px;
@@ -60,7 +60,7 @@
   }
   
   .start-button, .dr-zen-button span {
-    margin-left: 5px;
+    margin: 15px;
   }
   
   .start-button:hover {
@@ -80,7 +80,7 @@
   .senthead {
     font-family: 'Roboto', serif;
     text-align: center;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     font-size: 100px;
     color: #fff;
     animation: fadeAnimation 2s ease-in-out infinite alternate;

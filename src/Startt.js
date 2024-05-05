@@ -206,7 +206,7 @@ const Startt = () => {
                         ) : (
                             <span>Analyze</span>
                         )}
-                        {loading && <span> Analyzing...</span>}
+                        {loading &&  "Analyzing..."}
                     </button>
                     <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>
                         Voice Input <FontAwesomeIcon icon={faMicrophone} style={{ color: iconColor }} />

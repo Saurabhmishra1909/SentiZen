@@ -25,28 +25,38 @@ function CoverPage() {
 
   const handleDrZenClick = (event) => {
     event.preventDefault();
-    setShowDrZenComponent(!showDrZenComponent); // Toggle the visibility of the DrZen component
+    // Toggle the visibility of the DrZen component only
+    setShowDrZenComponent(!showDrZenComponent);
   };
 
   return (
     <>
       <h1 className="senthead">SentimentZen</h1>
-      <div className="putin">
-        <div className="main-container">
-          <div className={`cover-container ${isLoaded ? 'fade-in' : ''}`}>
-            <TypingEffect prefix="Your" />
-            <p className="cover-subtitle">Express yourself and let us suggest what's best for you.</p>
-            <a href="#" onClick={handleStartClick} className="start-button">
-              Start <span>&rarr;</span>
-            </a>
-            <a href="#" onClick={handleDrZenClick} className="dr-zen-button">
-              Talk with Dr. Zen <span>&rarr;</span>
-            </a>
+      {!showStartComponent && (
+        <div className="putin">
+          <div className="main-container">
+            <div className={`cover-container ${isLoaded ? 'fade-in' : ''}`}>
+              <TypingEffect prefix="Your" />
+              <p className="cover-subtitle">Express yourself and let us suggest what's best for you.</p>
+              <a href="#" onClick={handleStartClick} className="start-button">
+                Start <span>&rarr;</span>
+              </a>
+              <a href="#" onClick={handleDrZenClick} className="dr-zen-button">
+                Chat with Dr. Zen <span>&rarr;</span>
+              </a>
+            </div>
           </div>
-          {showStartComponent && <Startt />}
         </div>
-        {showDrZenComponent && <DrZen />}
-      </div>
+      )}
+      {showStartComponent && <Startt />}
+      {/* Display DrZen component only when showDrZenComponent is true */}
+      {showDrZenComponent && (
+        <div className="putin">
+          <div className="main-container">
+            <DrZen />
+          </div>
+        </div>
+      )}
     </>
   );
 }
