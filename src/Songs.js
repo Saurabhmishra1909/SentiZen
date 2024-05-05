@@ -10,7 +10,7 @@ export default function Songs(props) {
         <>
             <h2>Feeling {emotionLabel} - Here are some songs</h2>
             {filteredSongs.map(song => (
-                <SongList title={song.title} singer={song.singer} genre={song.genre} />
+                <SongList image={song.image} title={song.title} singer={song.singer} genre={song.genre} />
             ))}
 
         </>

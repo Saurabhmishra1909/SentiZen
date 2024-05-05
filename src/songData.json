@@ -1454,95 +1454,125 @@
         "emotion": "sadness"
       },
       {
-        "title": "Lose Yourself",
-        "singer": "Eminem",
-        "genre": "Hip hop",
-        "emotion": "anger"
-      },
-      {
-        "title": "Break Stuff",
-        "singer": "Limp Bizkit",
-        "genre": "Nu metal, Rap metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "Killing in the Name",
-        "singer": "Rage Against the Machine",
-        "genre": "Alternative metal, Rap metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "Bullet in the Head",
-        "singer": "Rage Against the Machine",
-        "genre": "Alternative metal, Rap metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "In the End",
-        "singer": "Linkin Park",
-        "genre": "Nu metal, Rap rock",
-        "emotion": "anger"
-      },
-      {
-        "title": "Bulls on Parade",
-        "singer": "Rage Against the Machine",
-        "genre": "Alternative metal, Rap metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "Before I Forget",
-        "singer": "Slipknot",
-        "genre": "Nu metal, Alternative metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "Down with the Sickness",
-        "singer": "Disturbed",
-        "genre": "Nu metal, Alternative metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "The Way I Am",
-        "singer": "Eminem",
-        "genre": "Hip hop",
-        "emotion": "anger"
-      },
-      {
-        "title": "F**k You",
-        "singer": "Lily Allen",
-        "genre": "Pop",
-        "emotion": "anger"
-      },
-      {
-        "title": "Angry Again",
-        "singer": "Megadeth",
-        "genre": "Heavy metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "Downfall",
-        "singer": "Trust Company",
-        "genre": "Alternative metal, Nu metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "The Fight Song",
-        "singer": "Marilyn Manson",
-        "genre": "Industrial metal",
-        "emotion": "anger"
-      },
-      {
-        "title": "Numb",
-        "singer": "Linkin Park",
-        "genre": "Nu metal, Alternative rock",
-        "emotion": "anger"
-      },
-      {
-        "title": "Killing in the Name",
-        "singer": "Rage Against the Machine",
-        "genre": "Alternative metal, Rap metal",
-        "emotion": "anger"
-      },
+        "image": "https://m.media-amazon.com/images/M/MV5BZjVkYTdiMmMtZGVmMy00ZGE3LThiMTEtMDA2YzUxNzg2Mzk2XkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_.jpg",
+        "play": "https://www.youtube.com/watch?v=xFYQQPAOz7Y&ab_channel=EminemMusic",
+         "title": "Lose Yourself",
+         "singer": "Eminem",
+         "genre": "Hip hop",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://i.scdn.co/image/ab67616d0000b273e8c9276d2c6cc832da1cd684",
+        "play": "https://www.youtube.com/watch?v=ZpUYjpKg9KY&ab_channel=LimpBizkitVEVO",
+         "title": "Break Stuff",
+         "singer": "Limp Bizkit",
+         "genre": "Nu metal, Rap metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Killing_AUST.jpg/220px-Killing_AUST.jpg",
+        "play": "https://www.youtube.com/watch?v=bWXazVhlyxQ&ab_channel=RATMVEVO",
+         "title": "Killing in the Name",
+         "singer": "Rage Against the Machine",
+         "genre": "Alternative metal, Rap metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f7/Bulletinthehead2.jpg",
+        "play": "https://www.youtube.com/watch?v=fI677jYfKz0&ab_channel=RaymondJE",
+         "title": "Bullet in the Head",
+         "singer": "Rage Against the Machine",
+         "genre": "Alternative metal, Rap metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/3/3f/LinkinParkIntheEnd.jpg",
+        "play": "https://www.youtube.com/watch?v=eVTXPUF4Oz4&ab_channel=LinkinPark",
+         "title": "In the End",
+         "singer": "Linkin Park",
+         "genre": "Nu metal, Rap rock",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHpS1Z0LLZCQkQ1-l-SbejJfwtrmlMWQVsCwQAvRpUCA&s",
+        "play": "https://www.youtube.com/watch?v=3L4YrGaR8E4&ab_channel=RATMVEVO",
+         "title": "Bulls on Parade",
+         "singer": "Rage Against the Machine",
+         "genre": "Alternative metal, Rap metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3fsALEkXqugn6b5Zq70JteG-4PME7zxIcJ-KXrBP1qw&s",
+        "play": "https://www.youtube.com/watch?v=qw2LU1yS7aw&ab_channel=Slipknot",
+         "title": "Before I Forget",
+         "singer": "Slipknot",
+         "genre": "Nu metal, Alternative metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/6/60/Disturbed_down_with_the_sickness.png",
+        "play": "https://www.youtube.com/watch?v=09LTT0xwdfw&ab_channel=Disturbed",
+         "title": "Down with the Sickness",
+         "singer": "Disturbed",
+         "genre": "Nu metal, Alternative metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/8/8b/Eminem_-_The_Way_I_Am_CD_cover.jpg",
+        "play": "https://www.youtube.com/watch?v=82lB-gI-uuQ&ab_channel=Eminem-Topic",
+         "title": "The Way I Am",
+         "singer": "Eminem",
+         "genre": "Hip hop",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/e/e2/Fuckyousingle.jpg",
+        "play": "https://www.youtube.com/watch?v=4BpFqyxEDbo&ab_channel=LilyAllen-Topic",
+         "title": "F**k You",
+         "singer": "Lily Allen",
+         "genre": "Pop",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://i.ytimg.com/vi/F07b98VdKBc/hqdefault.jpg",
+        "play": "https://www.youtube.com/watch?v=l3RsOxKHr6k&ab_channel=Megadeth-Topic",
+         "title": "Angry Again",
+         "singer": "Megadeth",
+         "genre": "Heavy metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/f8/TrustCompanyDownfall.jpg",
+        "play": "https://www.youtube.com/watch?v=BE_0m5OkyN4&ab_channel=TRUSTcompanyVEVO",
+         "title": "Downfall",
+         "singer": "Trust Company",
+         "genre": "Alternative metal, Nu metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFUPtdNONAg8RR7x6Ih9RXA2oHQD3pON-EcXOLKUjbGg&s",
+        "play": "https://www.youtube.com/watch?v=9GFI6Rf-IkI&ab_channel=MarilynMansonVEVO",
+         "title": "The Fight Song",
+         "singer": "Marilyn Manson",
+         "genre": "Industrial metal",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Linkin_Park_-_Numb_CD_cover.jpg/220px-Linkin_Park_-_Numb_CD_cover.jpg",
+        "play": "https://www.youtube.com/watch?v=8qJcbeO3Ajs&ab_channel=LatinHype",
+         "title": "Numb",
+         "singer": "Linkin Park",
+         "genre": "Nu metal, Alternative rock",
+         "emotion": "anger"
+       },
+       {
+        "image": "https://i.ytimg.com/vi/d8ekz_CSBVg/maxresdefault.jpg",
+        "play": "https://www.youtube.com/watch?v=d8ekz_CSBVg&ab_channel=ThreeDaysGraceVEVO",
+         "title": "I Hate Everything About You",
+         "singer": "Three Days Grace",
+         "genre": "Alternative rock/post-grunge",
+         "emotion": "anger"
+       },
       {
         "title": "Don't Stop Believin'",
         "singer": "Journey",

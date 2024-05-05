@@ -31,17 +31,22 @@ body {
 }
 #queryInput{
     font-size:30px;
+    text-align:center;
     background:none;
+    width: 700px; /* Adjust width as needed */
+    height: 20px;
 }
 .inputt input[type="text"] {
-    padding: 15px 230px; /* Adjust padding as needed */
+    padding: 15px 50px; /* Adjust padding as needed */
     border: none;
     border-radius: 20px; /* Adjust border-radius for roundness */
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Initial glow effect */
     transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
     width: 300px; /* Adjust width as needed */
+    
 }
+
 
 .inputt input[type="text"]:focus {
     outline: none;
@@ -98,6 +103,7 @@ body {
     opacity: 100;
     transition: opacity 1s ease; /* Add transition for opacity */
 }
+
 
 .fade-in {
     opacity: 1;

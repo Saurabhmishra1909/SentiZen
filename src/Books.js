@@ -10,7 +10,7 @@ export default function Books(props) {
     <>
       <h2>Feeling {emotionLabel} - Here are some books</h2>
       {filteredSongs.map(book => (
-        <BookList title={book.title} author={book.author} image={book.image} />
+        <BookList title={book.title} author={book.author} image={book.image} read_now={book.book_link} />
       ))}
 
     </>
