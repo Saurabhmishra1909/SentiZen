@@ -64,7 +64,7 @@ const Startt = () => {
                                         size: 30, // Adjust font size as needed
                                         family: 'Arial', // Specify font family
                                         style: 'italic', // Specify font style
-                                         // Specify font weight
+                                        // Specify font weight
                                     },
                                     color: '#fff', // Specify font color
                                 }
@@ -75,12 +75,12 @@ const Startt = () => {
                                         size: 30,
                                         family: 'Arial',
                                         style: 'italic',
-                                       
+
                                     },
                                     color: '#fff',
                                 }
                             },
-                            
+
                         }
                     }
                 });
@@ -136,7 +136,7 @@ const Startt = () => {
         setSuggestionsVisible(true);
     };
     const [iconColor, setIconColor] = useState('initial');
-    const [isPlaying, setIsPlaying] = useState(false); 
+    const [isPlaying, setIsPlaying] = useState(false);
     const startSpeechRecognition = () => {
         setIconColor('red');
         playSound();
@@ -169,8 +169,8 @@ const Startt = () => {
             setIsPlaying(false); // Reset state when sound ends
             setTimeout(() => {
                 setIconColor('initial'); // Reset icon color to its original color after a delay
-              }, 5000); 
-          }; // Reset state when sound ends
+            }, 5000);
+        }; // Reset state when sound ends
     };
     // Render the selected component based on button click
     const renderSelectedComponent = () => {
@@ -187,24 +187,34 @@ const Startt = () => {
                 return null;
         }
     };
-   
+
     return (
         <div className="content">
             {/* <p>Take a moment to immerse yourself in the beauty of life's simple joys. Let the gentle whispers of nature soothe your soul, as you embrace the warmth of a sun-kissed breeze.</p>
             <p> Feel the rhythm of your heartbeat synchronize with the melody of the universe, reminding you of the infinite possibilities that lie ahead. Allow gratitude to fill your heart and gratitude to guide your path.</p> */}
             <div className="container">
                 <div className="inputt">
-                <input type="text" id="queryInput" placeholder="How are you feeling?" />
+                    <input type="text" id="queryInput" placeholder="How are you feeling?" />
                 </div>
                 <div className="input-container" id="textInputLabel">
-                    <button id="submitBtn" onClick={performQuery} className={loading ? 'loading' : ''}>Analyze</button>
+                    <button id="submitBtn" onClick={performQuery} >
+                        {loading ? (
+                            <div>
+                                <i className="fa fa-spinner fa-pulse fa-fw"></i>
+                                <span className="sr-only">Loading...</span>
+                            </div>
+                        ) : (
+                            <span>Analyze</span>
+                        )}
+                        {loading && <span> Analyzing...</span>}
+                    </button>
                     <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>
-      Voice Input <FontAwesomeIcon icon={faMicrophone} style={{ color: iconColor }} />
-    </button>
+                        Voice Input <FontAwesomeIcon icon={faMicrophone} style={{ color: iconColor }} />
+                    </button>
                 </div>
                 <div className="chartt">
-                <canvas id="myChart"></canvas>
-                <p id="firstemotionText">{emotionLabel && `Based on the analysis you seem to be feeling: ${tempEmo}`}</p>
+                    <canvas id="myChart"></canvas>
+                    <p id="firstemotionText">{emotionLabel && `Based on the analysis you seem to be feeling: ${tempEmo}`}</p>
                 </div>
                 {suggestionsVisible && (
                     <div id="suggestionsSection">
@@ -226,10 +236,10 @@ const Startt = () => {
                                 <img src="imgs/movie.png" alt="Movies" />
                                 <h2 className='textt'>Movies</h2>
                             </button>
-                            
+
                         </div>
                     </div>
-                    
+
                 )}
             </div>
             <div id="recommend">

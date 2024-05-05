@@ -1,10 +1,8 @@
 .cover-container {
     position: absolute;
-    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1; /* Ensure content appears above the video */
+    text-align: center; 
     opacity: 100;
     transition: opacity 1s ease; /* Add transition for opacity */
   }
@@ -16,7 +14,7 @@
     font-family: 'Roboto',serif;
     margin-top: 10%;
     text-align: center;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     font-size: 100px;
     color: #fff;
     animation: fadeAnimation 2s ease-in-out infinite alternate; /* Apply the animation */
@@ -48,7 +46,7 @@
 
   }
   
-  .start-button {
+  .start-button, .dr-zen-button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 30px;
@@ -61,11 +59,15 @@
   transition: all 0.3s ease; /* Add transition for background-color and transform */
   }
   
-  .start-button span {
+  .start-button, .dr-zen-button span {
     margin-left: 5px;
   }
   
   .start-button:hover {
+    background-color: #0458ad;
+    transform: scale(1.1); /* Scale the button on hover */
+  }
+  .dr-zen-button:hover {
     background-color: #0458ad;
     transform: scale(1.1); /* Scale the button on hover */
   }

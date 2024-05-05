@@ -150,23 +150,10 @@ body {
   
   /* Add loading class to button */
   #submitBtn{
-    padding: 10px 80px;
+    padding: 10px 100px;
     border:1px solid white;
     border-radius:10px;
   }
-  #submitBtn.loading::after {
-    content: "";
-    width: 20px;
-    height: 20px;
-    border: 2px solid #f3f3f3;
-    border-top: 2px solid #3498db;
-    border-radius: 50%;
-    display: inline-block;
-    animation: spin 5s infinite;
-    margin-left: 5px;
-  }
-  
-  /* Add other styles for your components here */
   
 .input-container input[type="text"] {
     width: 300px;
