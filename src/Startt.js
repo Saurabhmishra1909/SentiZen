@@ -4,6 +4,7 @@ import Songs from './Songs';
 import Books from './Books';
 import Podcast from './Podcast';
 import Movie from './Movie';
+import DrZen from './DrZen';
 import Yoga from './Yoga';
 import './Startt.css';
 import soundFile from './voice.wav';
@@ -11,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone } from '@fortawesome/free-solid-svg-icons';
 let tempEmo;
 const Startt = () => {
+    const [showDrZenComponent, setShowDrZenComponent] = useState(false);
     const [chartInstance, setChartInstance] = useState(null);
     const [suggestionsVisible, setSuggestionsVisible] = useState(false);
     const [emotionLabel, setEmotionLabel] = useState(null);
@@ -187,6 +189,10 @@ const Startt = () => {
                 return null;
         }
     };
+    const handleDrZenClick = () => {
+        // Toggle visibility of DrZen component
+        setShowDrZenComponent(!showDrZenComponent);
+    };
 
     return (
         <div className="content">
@@ -206,7 +212,7 @@ const Startt = () => {
                         ) : (
                             <span>Analyze</span>
                         )}
-                        {loading &&  "Analyzing..."}
+                        {loading && "Analyzing..."}
                     </button>
                     <button id="speechRecognitionBtn" onClick={startSpeechRecognition}>
                         Voice Input <FontAwesomeIcon icon={faMicrophone} style={{ color: iconColor }} />
@@ -236,8 +242,21 @@ const Startt = () => {
                                 <img src="imgs/movie.png" alt="Movies" />
                                 <h2 className='textt'>Movies</h2>
                             </button>
+                            <button className="button" onClick={() => handleButtonClick('Podcasts')}>
+                                <img src="imgs/podcast.png" alt="Soon..." />
+                                <h2 className='textt'>Podcast (Soon...)</h2>
+                            </button>
 
                         </div>
+                        <a href="#" onClick={handleDrZenClick} className="dr-zen-button">
+                            Chat with Dr. Zen 
+                        </a>
+                        {/* Display DrZen component only when showDrZenComponent is true */}
+                        {showDrZenComponent && (
+                            <div className="drzen-container">
+                                <DrZen />
+                            </div>
+                        )}
                     </div>
 
                 )}

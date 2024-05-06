@@ -258,3 +258,18 @@ body {
     text-transform: uppercase;
     color: yellow;
 }
+//dr zen button css
+.butzen {
+    background-color: transparent;
+    border: 2px solid #f11; /* Add border for a visible button */
+    color: #ffff; /* Text color */
+    padding: 10px 30px; /* Adjust padding as needed */
+    font-size: 22px; /* Adjust font size as needed */
+    cursor: pointer;
+    border-radius:20px;
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.button-drzen:hover {
+    background-color: rgba(11, 588, 999, 0.6); /* Change background color on hover */
+}
