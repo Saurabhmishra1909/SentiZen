@@ -1,16 +1,16 @@
-/* ChatInterface.css */
 .zen-chat-container {
-  width: 600px;
-  height: auto; /* Start with height 0 */
-  overflow: hidden; /* Hide overflow content */
-  margin: 20px 1620px;
-  padding: 20px;
-  /* z-index:4; */
-  border: 3px solid #ccc;
-  border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 4px rgba(111, 0, 0, 0.9);
-  animation: slideInOutAnimation 0.5s ease forwards; /* Apply the slide-down animation */
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    width: 500px;
+    border: 1px solid #ccc;
+    background-color: rgba(0,0,0,0.5);
+    border-radius:30px;
+    box-shadow: 0 2px 5px rgba(111, 0, 0, 0.9);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    z-index: 9999;
+    animation: slideInOutAnimation 0.5s ease forwards; /* Apply the slide-down animation */
 }
 @keyframes slideInOutAnimation {
   from {
@@ -21,10 +21,41 @@
   }
 }
 
+.zen-chat-container.visible {
+    transform: translateX(-300px); /* Slide in from the right */
+}
 
-  .zen-response-container {
+.zen-chat-content {
+    display: none;
+}
+
+.zen-chat-container.visible .zen-chat-content {
+    display: block;
+}
+.zen-input-container {
+  margin-bottom: 10px;
+  padding-top:15px;
+}
+
+.zen-toggler {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.zen-toggler:hover {
+    background-color: #0056b3;
+}
+
+.zen-response-container {
+    margin-top:10px;
+    padding: 10px;
+    margin-left:10px;
+    border-bottom: 1px solid #ccc;
     color: #fff; /* Set font color to white */
-    width:550px;
+    width:440px;
     font-size:20px;
     background-color: #4CAF50; /* Set background color to a green shade */
     border-radius: 30px; /* Add rounded corners */
@@ -32,52 +63,34 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a subtle shadow */
     font-family: Arial, sans-serif; /* Use a fallback font */
 }
-  .zen-input-container {
+
+.zen-input-container {
     display: flex;
-    margin-bottom: 10px;
-    padding-top:15px;
-  }
-  
-  input[type="text"] {
+    align-items: center;
+    padding: 10px;
+}
+
+.zen-input-container input[type="text"] {
     flex: 1;
+    margin-top:10px;
     padding: 10px;
     border: 1px solid #f00f;
     border-radius: 20px;
-    font-size: 20px;
-    z-index:2;
-  }
-  
-  .zen-button {
-    z-index:2;
-    padding: 10px 20px;
-    margin-left: 10px;
+    font-size:20px;
+    margin-right: 10px;
+}
+
+.zen-button {
     background-color: #007bff;
     color: #fff;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
+    border: red;
+    margin-bottom:-6px;
+    padding: 10px 20px;
+    border-radius: 22px;
+    font-size:20px;
     cursor: pointer;
-  }
-  
-  .zen-chat-history {
-    padding:10px;
-    margin-top: 20px;
-  }
-  
-  .zen-chat-bubble {
+}
 
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .user-message {
-    background-color: #e3f2fd;
-  }
-  
-  .ai-message {
-    background-color: #f0f0f0;
-  }
-
-  
-  
+.zen-button:hover {
+    background-color: #0056b3;
+}
