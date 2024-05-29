@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './LandingPage.css'; // Import your CSS file
 import Startt from './Startt.js'; // Import the Startt component
 import TypingEffect from './typingeffect'; // Import the TypingEffect component
-import DrZen from './DrZen'; 
+import DrZen from './DrZen';
 import './typingeffect.css';
 
 function CoverPage() {
@@ -29,6 +29,10 @@ function CoverPage() {
     setShowDrZenComponent(!showDrZenComponent);
   };
 
+  const handleCloseDrZen = () => {
+    setShowDrZenComponent(false); // Close DrZen component
+  };
+
   return (
     <>
       <h1 className="senthead">SentimentZen</h1>
@@ -48,14 +52,22 @@ function CoverPage() {
           </div>
         </div>
       )}
+
       {showStartComponent && <Startt />}
       {/* Display DrZen component only when showDrZenComponent is true */}
       {showDrZenComponent && (
-        <div className="putin">
-          <div className="main-container">
-            <DrZen />
+        <>
+          <div className="cross-button">
+            <button onClick={handleCloseDrZen}>
+            <i class="fa fa-window-close" ></i>
+            </button>
           </div>
-        </div>
+          <div className="putin">
+            <div className="main-container">
+              <DrZen />
+            </div>
+          </div>
+        </>
       )}
     </>
   );

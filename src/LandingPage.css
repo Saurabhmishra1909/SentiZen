@@ -85,6 +85,17 @@
     color: #fff;
     animation: fadeAnimation 2s ease-in-out infinite alternate;
   }
+  .cross-button{
+    margin-left:75.4%;
+    position: absolute;
+    cursor: pointer;
+    margin-top:-1.6%;
+    z-index:9999;
+  }
+  .cross-button i{
+    cursor:pointer;
+    border-radius:50%;
+  }
   /* Media Query for Small Devices (Mobile Phones) */
 @media only screen and (max-width: 600px) {
   .senthead {

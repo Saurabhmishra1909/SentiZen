@@ -31,6 +31,7 @@ const Startt = () => {
                 const data = responseData.map(({ label, score }) => ({ label, score }));
                 tempEmo = data[0].label;
                 const ctx = document.getElementById('myChart');
+                ctx.height = 450; 
                 const newChartInstance = new Chart(ctx, {
                     type: 'bar',
                     data: {
@@ -58,6 +59,18 @@ const Startt = () => {
                         }]
                     },
                     options: {
+                            plugins: {
+                                legend: {
+                                    labels: {
+                                        boxWidth: 100,
+                                        boxHeight:50,
+                                        // Adjust the size of the box as needed
+                                        font: {
+                                            size: 40 // Adjust the font size of the legend box
+                                        }
+                                    }
+                                }
+                            },
                         scales: {
                             y: {
                                 beginAtZero: true,
@@ -192,6 +205,16 @@ const Startt = () => {
     const handleDrZenClick = () => {
         // Toggle visibility of DrZen component
         setShowDrZenComponent(!showDrZenComponent);
+        const drZenComponent = document.getElementById('drZenComponent');
+        if (drZenComponent) {
+            drZenComponent.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent form submission
+            performQuery(); // Call performQuery function when Enter key is pressed
+        }
     };
 
     return (
@@ -200,9 +223,10 @@ const Startt = () => {
             <p> Feel the rhythm of your heartbeat synchronize with the melody of the universe, reminding you of the infinite possibilities that lie ahead. Allow gratitude to fill your heart and gratitude to guide your path.</p> */}
             <div className="container">
                 <div className="inputt">
-                    <input type="text" id="queryInput" placeholder="How are you feeling?" />
+                    <input type="text" id="queryInput" placeholder="How are you feeling?" onKeyDown={handleKeyDown}  />
                 </div>
                 <div className="input-container" id="textInputLabel">
+
                     <button id="submitBtn" onClick={performQuery} >
                         {loading ? (
                             <div>
@@ -248,15 +272,17 @@ const Startt = () => {
                             </button>
 
                         </div>
-                        <a href="#" onClick={handleDrZenClick} className="dr-zen-button">
-                            Chat with Dr. Zen 
-                        </a>
-                        {/* Display DrZen component only when showDrZenComponent is true */}
-                        {showDrZenComponent && (
-                            <div className="drzen-container">
-                                <DrZen />
+                        <div id="drZenComponent"> {/* Added ID for smooth scrolling */}
+                            <div className="dr-zen-button" onClick={handleDrZenClick}>
+                                Chat with Dr. Zen
                             </div>
-                        )}
+                            {/* Display DrZen component only when showDrZenComponent is true */}
+                            {showDrZenComponent && (
+                                <div className="drzen-container">
+                                    <DrZen />
+                                </div>
+                            )}
+                        </div>
                     </div>
 
                 )}
